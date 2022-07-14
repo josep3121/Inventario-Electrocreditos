@@ -5,6 +5,7 @@ use App\Http\Controllers\Clientes;
 use App\Http\Controllers\Productos;
 use App\Http\Controllers\Ventas;
 use App\Http\Controllers\pago;
+use App\Http\Controllers\ganancias;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,3 +51,8 @@ Route::get('pagar/{cedula}', [Clientes::class, 'formularioPago'])->name('registr
 Route::post('pagar', [Clientes::class, 'registrar1'])->name('registrar1');
 //Listar Pagos
 Route::get('Visualizar_pagos',[pago::class, 'listar'])->name('listadoPagos');
+//Listar Ganancias
+Route::get('Ganancias/visualizar_ganancias',[ganancias::class, 'listarG'])->name('listadoGanancias');
+//Route::get('Ganancias/ganancia_mes',[ganancias::class, 'gana_mes'])->name('listadoGanancias');
+//////Buscar fechas////
+Route::post('buscarF', [ganancias::class, 'gana_mes'])->name('establecer');

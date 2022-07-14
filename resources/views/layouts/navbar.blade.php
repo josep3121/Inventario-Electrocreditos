@@ -16,7 +16,7 @@
           <a class="nav-link" href="{{url('Visualizar_pagos')}}">Pagos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="" >Ganancias</a>
+          <a class="nav-link" href="{{url('Ganancias/visualizar_ganancias')}}" >Ganancias</a>
         </li>
       </ul>
     </div>
